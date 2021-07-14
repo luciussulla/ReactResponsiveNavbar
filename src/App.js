@@ -1,23 +1,21 @@
+import React from 'react'
+import {useState} from 'react'
 import logo from './logo.svg';
 import './App.css';
+import Navbar from './components/Navbar'
+
 
 function App() {
+  const [isMenuVisible, setMenuVisible] = useState(true)
+
+  const toggleMenu  = ()=> {
+    console.log(`menu toggle in APP is ${isMenuVisible}`)
+    setMenuVisible(prevState => !prevState)
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar isMenuVisible={isMenuVisible} toggleMenu={toggleMenu}/>
     </div>
   );
 }
