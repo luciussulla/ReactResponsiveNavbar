@@ -1,6 +1,7 @@
 import React, {useRef, useEffect} from 'react'
 import {FaBars} from 'react-icons/fa'
 import {links} from './data'
+import logoNestle from '../logoNestle.png'
 
 const Navbar = ({isMenuVisible, toggleMenu})=> {
   console.log("Menu toggle in vavbar is: "+isMenuVisible)
@@ -20,7 +21,7 @@ const Navbar = ({isMenuVisible, toggleMenu})=> {
   <nav>
     <div className="nav-center">
       <div className="nav-header">
-        <p>This is logo</p>
+        <p><img className="logo" src={logoNestle}/></p>
         <button className="nav-toggle" onClick={toggleMenu}>
           <FaBars />
         </button>

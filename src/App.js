@@ -6,7 +6,7 @@ import Navbar from './components/Navbar'
 
 
 function App() {
-  const [isMenuVisible, setMenuVisible] = useState(true)
+  const [isMenuVisible, setMenuVisible] = useState(false)
 
   const toggleMenu  = ()=> {
     console.log(`menu toggle in APP is ${isMenuVisible}`)
