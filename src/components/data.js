@@ -7,7 +7,7 @@ export const links = [
     text: 'home',
   },
   {
-    id: 3, 
+    id: 2, 
     url: '/about',
     text: 'about',
   },
